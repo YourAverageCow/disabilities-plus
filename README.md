@@ -133,7 +133,7 @@ The plainest stat-nerf disabilities now have a mechanic you can play around, so 
 
 ## What changed in 1.5.0: five real conditions
 
-These replace the five invented ones in 1.4.0 (Loneliness, Empath, Wanted, Hot Potato, Tattletale). Each is a real condition, works alone, and is much better with other people.
+Five conditions built on real ones. Each works alone and is much better with other people.
 
 | Condition | What it is | Alone | With others |
 |---|---|---|---|
