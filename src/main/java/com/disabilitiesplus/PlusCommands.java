@@ -92,6 +92,7 @@ public final class PlusCommands {
 
       root.addChild(
          Commands.literal("deathremoval")
+            .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
             .executes(ctx -> {
                int n = PlusState.deathRemoval();
                feedback(ctx, "Each death currently removes " + n + (n == 1 ? " random disability." : " random disabilities."));
