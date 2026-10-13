@@ -8,12 +8,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/** The original list only knows its own disabilities, so it is replaced by one that shows both mods' together. */
 @Mixin(value = DisabilityHud.class, remap = false)
 public class PlusHudListMixin {
-   @Inject(method = "render", at = @At("HEAD"), cancellable = true)
-   private static void disabilitiesPlus$combinedList(GuiGraphicsExtractor ctx, int mouseX, int mouseY, CallbackInfo ci) {
-      PlusHudList.render(ctx, mouseX, mouseY);
-      ci.cancel();
-   }
+    @Inject(method = "render", at = @At("HEAD"), cancellable = true)
+    private static void disabilitiesPlus$combinedList(GuiGraphicsExtractor ctx, int mouseX, int mouseY, CallbackInfo ci) {
+        PlusHudList.render(ctx, mouseX, mouseY);
+        ci.cancel();
+    }
 }

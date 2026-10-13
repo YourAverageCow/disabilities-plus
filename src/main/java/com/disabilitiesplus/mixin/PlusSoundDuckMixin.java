@@ -10,11 +10,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SoundEngine.class)
 public class PlusSoundDuckMixin {
-   @Inject(method = "calculateVolume(FLnet/minecraft/sounds/SoundSource;)F", at = @At("RETURN"), cancellable = true)
-   private void disabilitiesPlus$duck(float volume, SoundSource category, CallbackInfoReturnable<Float> cir) {
-      float duck = PlusClientState.soundDuck();
-      if (duck != 1.0F && category != SoundSource.VOICE) {
-         cir.setReturnValue(cir.getReturnValue() * duck);
-      }
-   }
+    @Inject(method = "calculateVolume(FLnet/minecraft/sounds/SoundSource;)F", at = @At("RETURN"), cancellable = true)
+    private void disabilitiesPlus$duck(float volume, SoundSource category, CallbackInfoReturnable<Float> cir) {
+        float duck = PlusClientState.soundDuck();
+        if (duck != 1.0F && category != SoundSource.VOICE) {
+            cir.setReturnValue(cir.getReturnValue() * duck);
+        }
+    }
 }

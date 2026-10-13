@@ -7,6 +7,6 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(ClientInput.class)
 public interface PlusInputAccessor {
-   @Accessor("moveVector")
-   void disabilitiesPlus$setMoveVector(Vec2 vector);
+    @Accessor("moveVector")
+    void disabilitiesPlus$setMoveVector(Vec2 vector);
 }

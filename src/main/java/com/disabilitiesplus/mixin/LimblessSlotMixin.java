@@ -10,13 +10,12 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/** A player with no arms cannot move items around in any inventory screen either. */
 @Mixin(AbstractContainerMenu.class)
 public abstract class LimblessSlotMixin {
-   @Inject(method = "clicked", at = @At("HEAD"), cancellable = true)
-   private void disabilitiesPlus$noArms(int slotIndex, int button, ContainerInput actionType, Player player, CallbackInfo ci) {
-      if (PlusView.has(player, PlusDisability.QUADRUPLE_AMPUTEE)) {
-         ci.cancel();
-      }
-   }
+    @Inject(method = "clicked", at = @At("HEAD"), cancellable = true)
+    private void disabilitiesPlus$noArms(int slotIndex, int button, ContainerInput actionType, Player player, CallbackInfo ci) {
+        if (PlusView.has(player, PlusDisability.QUADRUPLE_AMPUTEE)) {
+            ci.cancel();
+        }
+    }
 }

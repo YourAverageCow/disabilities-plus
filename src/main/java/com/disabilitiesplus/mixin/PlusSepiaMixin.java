@@ -15,14 +15,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GameRenderer.class)
 public class PlusSepiaMixin {
-   @Unique
-   private static final Identifier SEPIA = Identifier.fromNamespaceAndPath("disabilities_plus", "sepia");
+    @Unique
+    private static final Identifier SEPIA = Identifier.fromNamespaceAndPath("disabilities_plus", "sepia");
 
-   /** Ginger gives a sepia world, unless Color Blind already has the screen in grayscale. */
-   @Inject(method = "update", at = @At("TAIL"))
-   private void disabilitiesPlus$sepia(DeltaTracker deltaTracker, CallbackInfo ci) {
-      if (PlusClientState.has(PlusDisability.GINGER) && !ClientState.has(Disability.COLOR_BLIND)) {
-         ((GameRenderer)(Object)this).getRequestedPostEffects().add(SEPIA);
-      }
-   }
+    @Inject(method = "update", at = @At("TAIL"))
+    private void disabilitiesPlus$sepia(DeltaTracker deltaTracker, CallbackInfo ci) {
+        if (PlusClientState.has(PlusDisability.GINGER) && !ClientState.has(Disability.COLOR_BLIND)) {
+            ((GameRenderer)(Object)this).getRequestedPostEffects().add(SEPIA);
+        }
+    }
 }
