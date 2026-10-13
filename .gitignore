@@ -1,0 +1,12 @@
+# build output and local tooling
+build/
+.gradle/
+run/
+logs/
+*.log
+.idea/
+*.iml
+.vscode/
+
+# the original mod is a local compile/run dependency (all rights reserved): never commit it
+libs/*.jar

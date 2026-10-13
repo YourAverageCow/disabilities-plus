@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "disabilities-plus-gametest",
+  "version": "1.0.0",
+  "name": "Disabilities Plus gametest",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": [
+      "com.disabilitiesplus.DisabilitiesClientGameTest"
+    ]
+  },
+  "depends": {
+    "disabilities": "*",
+    "disabilities_plus": "*",
+    "fabric-api": "*"
+  }
+}

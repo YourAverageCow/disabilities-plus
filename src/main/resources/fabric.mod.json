@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "disabilities_plus",
+  "version": "${version}",
+  "name": "Disabilities Plus",
+  "description": "An add-on for the Disabilities mod: 82 more disabilities, each with its own mechanic and counterplay: fears, cravings, illnesses and conditions, many better with friends, plus /disability deathremoval.",
+  "authors": [],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.disabilitiesplus.DisabilitiesPlus"
+    ],
+    "client": [
+      "com.disabilitiesplus.client.DisabilitiesPlusClient"
+    ]
+  },
+  "mixins": [
+    "disabilities_plus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "disabilities": ">=0.5.0"
+  }
+}

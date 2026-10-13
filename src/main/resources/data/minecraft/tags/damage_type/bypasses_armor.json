@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "disabilities_plus:bleeding",
+    "disabilities_plus:heart_attack",
+    "disabilities_plus:kidney_stone",
+    "disabilities_plus:allergic_reaction"
+  ]
+}
