@@ -227,3 +227,8 @@ xvfb-run -a ./gradlew runClientGameTest   # headless end-to-end run with the ori
 ```
 
 The original jar must be in `libs/` (it is a dev dependency only and is never bundled into the add-on jar).
+
+## License
+
+MIT, see [LICENSE](LICENSE). This covers the add-on's own code only. The original *Disabilities* mod is a separate
+work under its own terms; it is not included in this repository or in the add-on jar.

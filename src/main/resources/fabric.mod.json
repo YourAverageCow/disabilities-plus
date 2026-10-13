@@ -4,8 +4,13 @@
   "version": "${version}",
   "name": "Disabilities Plus",
   "description": "An add-on for the Disabilities mod: 82 more disabilities, each with its own mechanic and counterplay: fears, cravings, illnesses and conditions, many better with friends, plus /disability deathremoval.",
-  "authors": [],
-  "license": "All-Rights-Reserved",
+  "authors": [
+    "YourAverageCow"
+  ],
+  "license": "MIT",
+  "contact": {
+    "sources": "https://github.com/YourAverageCow/disabilities-plus-plus"
+  },
   "environment": "*",
   "entrypoints": {
     "main": [
